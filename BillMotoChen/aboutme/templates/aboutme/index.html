@@ -30,11 +30,62 @@
 
 <body>
     {% include 'aboutme/include/header.html' %}
+        <!-- Carousel Start -->
+    <br><br>
+    <div class="container-fluid p-0" style="margin-bottom: 90px;">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'aboutme/img/me.jpg' %}" alt="Image" style="width: 900px; height: 1200px;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h2 class="text-white text-uppercase mb-md-3">Bill Moto Chen</h2>
+                            <h3 class="display-1 text-white mb-md-4">Everything About Me is Here</h3>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Find Out More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'aboutme/img/prog.jpeg' %}" alt="Image" style="width: 900px; height: 1000px;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h2 class="text-white text-uppercase mb-md-3">Programming Study Note</h2>
+                            <h3 class="display-1 text-white mb-md-4">Some Personal Study Notes About Programming</h3>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'aboutme/img/private.jpg' %}" alt="Image" style="width: 900px; height: 1000px;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h2 class="text-white text-uppercase mb-md-3">Private Life</h2>
+                            <h3 class="display-1 text-white mb-md-4">Who I Really Am</h3>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Join My Life</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n2"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
-            <h1 class="display-1 text-primary text-center">What is the site about?</h1>
-            <h1 class="display-4 text-uppercase text-center mb-5">Welcome To <span class="text-primary">Royal Cars</span></h1>
+            <h1 class="display-1 text-primary text-center">About the Site</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Welcome To <span class="text-primary">Bill Moto Chen</span></h1>
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
                     <img class="w-75 mb-4" src="" alt="">
@@ -47,7 +98,7 @@
                         <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
                             <i class="fa fa-2x fa-headset text-secondary"></i>
                         </div>
-                        <h4 class="text-uppercase m-0">24/7 Car Rental Support</h4>
+                        <h4 class="text-uppercase m-0">DUMMY DUMMY</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-2">
@@ -55,7 +106,7 @@
                         <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
                             <i class="fa fa-2x fa-car text-secondary"></i>
                         </div>
-                        <h4 class="text-light text-uppercase m-0">Car Reservation Anytime</h4>
+                        <h4 class="text-light text-uppercase m-0">KAYU KAYU KAYU</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-2">
@@ -63,7 +114,7 @@
                         <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
                             <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
                         </div>
-                        <h4 class="text-uppercase m-0">Lots Of Pickup Locations</h4>
+                        <h4 class="text-uppercase m-0">BILL BILL BILL</h4>
                     </div>
                 </div>
             </div>
@@ -75,8 +126,8 @@
     <!-- Services Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
-            <h1 class="display-1 text-primary text-center">02</h1>
-            <h1 class="display-4 text-uppercase text-center mb-5">Our Services</h1>
+            <h1 class="display-1 text-primary text-center">What Can be Found Here</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Contents</h1>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
@@ -86,7 +137,7 @@
                             </div>
                             <h1 class="display-2 text-white mt-n2 m-0">01</h1>
                         </div>
-                        <h4 class="text-uppercase mb-3">Car Rental</h4>
+                        <h4 class="text-uppercase mb-3">DUMMY 1</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
                     </div>
                 </div>
@@ -98,7 +149,7 @@
                             </div>
                             <h1 class="display-2 text-white mt-n2 m-0">02</h1>
                         </div>
-                        <h4 class="text-uppercase mb-3">Car Financing</h4>
+                        <h4 class="text-uppercase mb-3">DUMMY 2</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
                     </div>
                 </div>
@@ -110,7 +161,7 @@
                             </div>
                             <h1 class="display-2 text-white mt-n2 m-0">03</h1>
                         </div>
-                        <h4 class="text-uppercase mb-3">Car Inspection</h4>
+                        <h4 class="text-uppercase mb-3">DUMMY 3</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
                     </div>
                 </div>
@@ -122,7 +173,7 @@
                             </div>
                             <h1 class="display-2 text-white mt-n2 m-0">04</h1>
                         </div>
-                        <h4 class="text-uppercase mb-3">Auto Repairing</h4>
+                        <h4 class="text-uppercase mb-3">DUMMY 4</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
                     </div>
                 </div>
@@ -134,7 +185,7 @@
                             </div>
                             <h1 class="display-2 text-white mt-n2 m-0">05</h1>
                         </div>
-                        <h4 class="text-uppercase mb-3">Auto Painting</h4>
+                        <h4 class="text-uppercase mb-3">DUMMY 5</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
                     </div>
                 </div>
@@ -146,7 +197,7 @@
                             </div>
                             <h1 class="display-2 text-white mt-n2 m-0">06</h1>
                         </div>
-                        <h4 class="text-uppercase mb-3">Auto Cleaning</h4>
+                        <h4 class="text-uppercase mb-3">DUMMY 6</h4>
                         <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
                     </div>
                 </div>
@@ -158,8 +209,8 @@
     <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
-            <h1 class="display-1 text-primary text-center">06</h1>
-            <h1 class="display-4 text-uppercase text-center mb-5">Contact Us</h1>
+            <h1 class="display-1 text-primary text-center">Contact Me</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Feel Free to Drop Me a Message</h1>
             <div class="row">
                 <div class="col-lg-7 mb-2">
                     <div class="contact-form bg-light mb-4" style="padding: 30px;">
@@ -221,79 +272,14 @@
     </div>
     <!-- Contact End -->
 
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
-        <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope text-white mr-3"></i>info@example.com</p>
-                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Usefull Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
-                    <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
-                <div class="row mx-n1">
-                    <div class="col-4 px-1 mb-2">
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Newsletter</h4>
-                <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                <div class="w-100 mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-dark border-dark" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary text-uppercase px-3">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-                <i>Lorem sit sed elitr sed kasd et</i>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
-        <p class="mb-2 text-center text-body">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
-        <p class="m-0 text-center text-body">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
-    </div>
-    <!-- Footer End -->
-
+    {% include 'aboutme/include/footer.html' %}
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-    3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
