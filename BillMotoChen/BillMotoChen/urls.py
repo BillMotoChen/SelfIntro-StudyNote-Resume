@@ -21,5 +21,5 @@ urlpatterns = [
     path('SelfIntro/', include('SelfIntro.urls')),
 
     # about me
-    path('aboutme/', include('aboutme.urls')),
+    path('bmc/', include('aboutme.urls')),
 ]
