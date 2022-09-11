@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Django, Jinja Function Tests</h1>
+
+    <h2>Pass Parameters</h2>
+    <h3>Player</h3>
+    {% for player in couple %}
+        <div>Name: {{ player.name }}</div>
+        <div>Age: {{ player.age }}</div><br>
+    {% endfor %}
+
+    <h3>From DB</h3>
+    {% for e in events %}
+     <a href="{% url 'test' e.id %}"><div>{{ e.title }}</div></a>
+    {% endfor %}
+    <br><br>
+    <div>Event: {{ event.title }}</div>
+    <div>Start Date: {{ event.date_start }}</div>
+    <div>End Date: {{ event.date_end }}</div>
+
+    {% if event.pk == 1 %}
+    <div>TEST EVENT</div>
+    {% else %}
+    <div>REAL EVENT</div>
+    {% endif %}
+</body>
+</html>
