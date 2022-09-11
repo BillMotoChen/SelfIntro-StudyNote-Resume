@@ -4,7 +4,6 @@ import logging
 from django.shortcuts import *
 from django.http import HttpResponse
 from aboutme.classes import player
-
 from aboutme.models import Career
 
 # Create your views here.
@@ -15,6 +14,9 @@ def health_check(request):
 
 def self_introduction(request):
     return render(request, 'aboutme/index.html')
+
+def hobbies(request):
+    return render(request, 'aboutme/hobbies.html')
 
 def test(request, id):
     me = player.player()
