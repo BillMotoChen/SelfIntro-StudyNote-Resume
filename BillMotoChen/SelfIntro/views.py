@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("I'm Bill")
+
+def pieces(request):
+    return render(request, 'index.html')
