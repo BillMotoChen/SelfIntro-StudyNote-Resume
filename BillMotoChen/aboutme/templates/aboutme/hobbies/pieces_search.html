@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hobbies</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+</head>
+<body>
+    {% include 'aboutme/include/header.html' %}
+        <!-- Carousel Start -->
+    <br><br>
+
+    <!-- Page Header Start -->
+    <div class="container-fluid hobbies-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">Hobbies</h1>
+        <div class="d-inline-flex text-white">
+            <h6 class="text-uppercase m-0"><a class="text-white" href="{% url 'selfIntroduction' %}">Home</a></h6>
+            <h6 class="text-body m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-body m-0"><a class="text-white" href="{% url 'hobbies' %}">Hobbies</a></h6>
+            <h6 class="text-body m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-body m-0">Pieces Search</h6>
+        </div>
+    </div>
+
+    <!-- Piano -->
+    <section class="first-section">
+    <h1 class="display-3 text-uppercase text-secondary mb-3">List of Pieces</h1>
+        <div class="row pt-5">
+            {% block content %}
+            {% if pieces|length == 0 %}
+            <h3 style="">
+               No Result Was Found
+            </h3>
+            {% else %}
+            <table id="pieces" class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-0lax">Title</th>
+                    <th class="tg-0lax">Composer</th>
+                    <th class="tg-0lax">Tonality</th>
+                    <th class="tg-0lax">Difficulty</th>
+                    <th class="tg-0lax">Status</th>
+                    <th class="tg-0lax">Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for piece in pieces %}
+                  <tr>
+                    <td class="tg-0lax">{{ piece.title }}</td>
+                    <td class="tg-0lax">{{ piece.composer }}</td>
+                    <td class="tg-0lax">{{ piece.tonality }}</td>
+                    <td class="tg-0lax">{{ piece.difficulty }}</td>
+                    {% if piece.status == 0 %}
+                    <td class="tg-0lax">to be played</td>
+                    {% elif piece.status == 1 %}
+                    <td class="tg-0lax">practicing</td>
+                    {% elif piece.status == 2 %}
+                    <td class="tg-0lax">memorized</td>
+                    {% elif piece.status == 3 %}
+                    <td class="tg-0lax">performable</td>
+                    {% endif%}
+                    <td class="tg-0lax">{{ piece.note }}</td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+            {% endblock %}
+        </div>
+    </section>
+
+{% include 'aboutme/include/footer.html' %}
+
+</body>
+</html>

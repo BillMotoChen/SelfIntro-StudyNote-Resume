@@ -1,0 +1,1 @@
+TONALITY = [0,'C Major','c Minor','G Major','g Minor','D Major','d Minor','A Major','a Minor','E Major','e Minor','B Major','b Minor','F Major','f Minor','B♭ Major','f♯ Minor','E♭ Major','c♯ Minor','A♭ Major','g♯ Minor','D♭ Major','b♭ Minor','G♭ Major','e♭ Minor']

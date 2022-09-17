@@ -41,35 +41,67 @@
             <div class="col-lg-6 mb-5">
                     <div class="bg-secondary p-5">
                         <h3 class="text-primary text-center mb-4">Check My Favorite Pieces</h3>
+                        <form method="get" action="{% url 'piecesSearch' %}">
                         <div class="form-group">
-                            <select class="custom-select px-4" style="height: 50px;">
-                                <option selected>Composer</option>
-                                <option value="1">Chopin</option>
-                                <option value="2">Beethoven</option>
-                                <option value="3">Liszt</option>
-                                <option value="4">Bach</option>
+                            <select name='composer' value="{{ request.GET.composer }}" class="custom-select px-4" style="height: 50px;">
+                                <option value="" selected>Composer</option>
+                                <option value="Chopin">Chopin</option>
+                                <option value="Beethoven">Beethoven</option>
+                                <option value="Liszt">Liszt</option>
+                                <option value="Bach">Bach</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="custom-select px-4" style="height: 50px;">
-                                <option selected>Tonality</option>
+                            <select name='tonality' value="{{ request.GET.tonality }}" class="custom-select px-4" style="height: 50px;">
+                                <option value="" selected>Tonality</option>
                                 <option value="1">C Major</option>
-                                <option value="2">C Minor</option>
-                                <option value="3">Db Major</option>
+                                <option value="2">c Minor</option>
+                                <option value="3">G Major</option>
+                                <option value="4">g Minor</option>
+                                <option value="5">D Major</option>
+                                <option value="6">d Minor</option>
+                                <option value="7">A Major</option>
+                                <option value="8">a Minor</option>
+                                <option value="9">E Major</option>
+                                <option value="10">e Minor</option>
+                                <option value="11">B Major</option>
+                                <option value="12">b Minor</option>
+                                <option value="13">F Major</option>
+                                <option value="14">f Minor</option>
+                                <option value="15">B♭ Major</option>
+                                <option value="16">f♯ Minor</option>
+                                <option value="17">E♭ Major</option>
+                                <option value="18">c♯ Minor</option>
+                                <option value="19">A♭ Major</option>
+                                <option value="20">g♯ Minor</option>
+                                <option value="21">D♭ Major</option>
+                                <option value="22">b♭ Minor</option>
+                                <option value="23">G♭ Major</option>
+                                <option value="24">e♭ Minor</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="custom-select px-4" style="height: 50px;">
-                                <option selected>Status</option>
-                                <option value="1">Want to Play</option>
-                                <option value="2">Practicing</option>
-                                <option value="3">Memorized but not Mastered</option>
-                                <option value="4">Performable</option>
+                            <select name='status' value="{{ request.GET.tonality }}" class="custom-select px-4" style="height: 50px;">
+                                <option value="" selected>Status</option>
+                                <option value="0">Want to Play</option>
+                                <option value="1">Practicing</option>
+                                <option value="2">Memorized but not Mastered</option>
+                                <option value="3">Performable</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name='sort' value="{{ request.GET.sort }}" class="custom-select px-4" style="height: 50px;">
+                                <option value="" selected>Sort By</option>
+                                <option value="0">Difficulty Ascending</option>
+                                <option value="1">Difficulty Descending</option>
+                                <option value="2">Status</option>
+                                <option value="3">Tonality</option>
                             </select>
                         </div>
                         <div class="form-group mb-0">
                             <button class="btn btn-primary btn-block" type="submit" style="height: 50px;">Check Now</button>
                         </div>
+                        </form>
                     </div>
                 </div>
         </div>
